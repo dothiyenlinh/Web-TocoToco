@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SPMaster.master.cs" Inherits="WebCuoi.SPMaster" %>
+
+<%@ Register Src="~/UC/ucHeader.ascx" TagPrefix="uc1" TagName="ucHeader" %>
+<%@ Register Src="~/UC/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
+<%@ Register Src="~/UC/ucBanChay.ascx" TagPrefix="uc1" TagName="ucBanChay" %>
+<%@ Register Src="~/UC/ucLeft.ascx" TagPrefix="uc1" TagName="ucLeft" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="shortcut icon" href="images/icon/ictoco.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>WELCOME TO TOCOTOCO </title>
+    <style>
+        .navbar {
+            background: #ffffff !important;
+            top: 0px;
+            left: 0px;
+        }
+
+        .carousel-inner img {
+            width: 80%;
+            height: 40%;
+            margin-left: 10%;
+            margin-top: 10%;
+        }
+
+        .form-control {
+            width: 20% !important;
+        }
+
+        article {
+            display: table-row;
+            width: 1100px !important;
+        }
+        .auto-style2 {
+            width: 23%;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <uc1:ucHeader runat="server" ID="ucHeader" />
+        <div id="body">
+            <div class="divsection">
+                <uc1:ucBanChay runat="server" ID="ucBanChay" />
+                <%-- <h1 id="thh1">--%>
+                <%--<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></h1>*@--%>
+                <%--<div class="row">
+                <div class="col-sm-3">
+                    <uc1:ucLeft runat="server" id="ucLeft" />
+                </div>--%>
+
+                <div id="left" class="auto-style2">
+                    <uc1:ucLeft runat="server" ID="ucLeft" />
+                </div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <%--</div>--%>
+        <uc1:Footer runat="server" ID="Footer" />
+    </form>
+</body>
+</html>

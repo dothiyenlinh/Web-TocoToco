@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="WebCuoi.AdminMaster" %>
+
+<%@ Register Src="~/UC/ADHeader.ascx" TagPrefix="uc1" TagName="ADHeader" %>
+<%@ Register Src="~/UC/Chan.ascx" TagPrefix="uc1" TagName="Chan" %>
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="shortcut icon" href="images/icon/ictoco.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>WELCOME TOCOTOCO </title>
+    <style>
+        .navbar {
+            background: #ffffff !important;
+            top: 0px;
+            left: 0px;
+        }
+
+        .carousel-inner img {
+            width: 80%;
+            height: 40%;
+            margin-left: 10%;
+            margin-top: 10%;
+        }
+
+        .form-control {
+            width: 20% !important;
+        }
+
+        .auto-style1 {
+            font-size: 24px;
+            color: #003366;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <uc1:ADHeader runat="server" ID="ADHeader" />
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <uc1:Chan runat="server" ID="Chan" />
+    </div>
+    </form>
+</body>
+</html>

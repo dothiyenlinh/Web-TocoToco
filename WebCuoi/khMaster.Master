@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="khMaster.master.cs" Inherits="WebCuoi.khMaster" %>
+
+<%@ Register Src="~/UC/ucHeader.ascx" TagPrefix="uc1" TagName="ucHeader" %>
+<%@ Register Src="~/UC/ucBanChay.ascx" TagPrefix="uc1" TagName="ucBanChay" %>
+<%@ Register Src="~/UC/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
+<%@ Register Src="~/UC/Chan.ascx" TagPrefix="uc1" TagName="Chan" %>
+
+
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="shortcut icon" href="images/icon/ictoco.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>WELCOME TOCOTOCO </title>
+    <style>
+        .navbar {
+            background: #ffffff !important;
+            top: 0px;
+            left: 0px;
+        }
+
+        .carousel-inner img {
+            width: 80%;
+            height: 40%;
+            margin-left: 10%;
+            margin-top: 10%;
+        }
+
+        .form-control {
+            width: 20% !important;
+        }
+
+        .auto-style1 {
+            font-size: 24px;
+            color: #003366;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <uc1:ucHeader runat="server" ID="ucHeader" />
+            <%--<section id="trangchu">--%>
+            <%-- <uc1:ucBanChay runat="server" ID="ucBanChay" />--%>
+            <div style="background-color: aliceblue; margin-top: 2%">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <%--</section>--%>
+            <uc1:Chan runat="server" ID="Chan" />
+        </div>
+    </form>
+</body>
+</html>
